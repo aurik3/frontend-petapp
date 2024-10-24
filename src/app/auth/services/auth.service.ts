@@ -21,7 +21,8 @@ export class AuthService {
 
   constructor() {
 
-     }
+  
+  }
 
   login(username: string, password: string):Observable<boolean> {
 
@@ -46,7 +47,7 @@ export class AuthService {
  checkauthStatus():Observable<boolean> {
     const url   = `${ this.baseUrl}/auth/info-user`;
 
-    const token = localStorage.getItem('token');
+    let token = localStorage?.getItem('token') || '';
     if(!token) return of(false);
 
     const headers = new HttpHeaders()
@@ -66,5 +67,12 @@ export class AuthService {
     )
   }
 
+  verifyAuthStatus():Observable<boolean> {
 
+    if (typeof window !== 'undefined' && !!localStorage.getItem('token')) {
+      return of(true);
+    }else{
+      return of(false);
+    }
+  }
 }
