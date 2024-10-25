@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    baseUrl: 'http://localhost:5000/api/v1',
+    baseUrl: 'https://backend-petapp-production.up.railway.app/api/v1',   
 }
