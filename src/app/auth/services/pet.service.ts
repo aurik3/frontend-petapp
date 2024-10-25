@@ -22,11 +22,11 @@ export class PetService {
     return this.http.get(url, {headers})
     .pipe(
       map((response) => {
-        console.log(response);
+       
         return response
       }),
       catchError((err) =>{    
-        console.log(err);  
+       
         return err;
       }) 
     )
@@ -41,11 +41,11 @@ export class PetService {
     return this.http.get(url, {headers})
     .pipe(
       map((response) => {
-        console.log(response);
+       
         return response
       }),
       catchError((err) =>{    
-        console.log(err);  
+     
         return err;
       })
     )
@@ -61,11 +61,11 @@ export class PetService {
     return this.http.post(url, {name, breed, age, weight}, {headers})
     .pipe(
       map((response) => {
-        console.log(response);
+       
         return response
       }),
       catchError((err) =>{    
-        console.log(err);  
+       
         return err;
       }) 
     )
@@ -81,11 +81,11 @@ export class PetService {
     return this.http.put(url, {name, breed, age, weight}, {headers})
     .pipe(
       map((response) => {
-        console.log(response);
+       
         return response
       }),
       catchError((err) =>{    
-        console.log(err);  
+       
         return err;
       }) 
     )
@@ -101,11 +101,11 @@ export class PetService {
     return this.http.delete(url, {headers})
     .pipe(
       map((response) => {
-        console.log(response);
+       
         return response
       }),
       catchError((err) =>{    
-        console.log(err);  
+        
         return err;
       })
     )
